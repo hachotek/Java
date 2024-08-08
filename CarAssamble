@@ -1,0 +1,34 @@
+public class CarsAssemble {
+
+    public double productionRatePerHour(int speed) 
+    {
+         double productionRate = 0;
+         double carsPerHour = 221;
+         if (speed == 10)
+             productionRate = ((speed*carsPerHour)*0.77);
+            else if (speed == 9)
+                 productionRate = ((speed*carsPerHour)*0.8);
+                     else if (speed <=8 && speed >4)
+                         productionRate = ((speed*carsPerHour)*0.9);
+                        else
+                            productionRate = speed*carsPerHour;
+         return productionRate;    
+    }
+
+    public int workingItemsPerMinute(int speed) {
+        double productionRate = 0;
+        int productionRateMinute = 0;
+        double carsPerHour = 221;
+         if (speed == 10)
+              productionRate = ((( (speed*carsPerHour)*0.77) ) / 60);
+            else if (speed == 9)
+                 productionRate =  (((speed*carsPerHour)*0.8)  / 60);
+                     else if (speed <=8 && speed >4)
+                          productionRate = (((speed*carsPerHour)*0.9) / 60);
+                        else
+                            productionRate = (speed*carsPerHour/60);
+        
+         productionRateMinute = (int)productionRate;
+         return productionRateMinute;   
+    }
+}
